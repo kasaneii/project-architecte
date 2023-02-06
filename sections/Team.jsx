@@ -1,14 +1,15 @@
 'use client';
 
-import styles from '../styles';
-import {motion} from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { people } from '../constants';
 import { fadeIn, staggerContainer, slideIn } from '../utils/motion';
+import styles from '../styles';
 
-const Team = () => (
-  <section
-    className={`${styles.yPaddings} ${styles.xPaddings}`}
-  >
+const Team = () => {
+  const [hoverIndex, setHoverIndex] = useState(-1)
+
+  return ( <section className={`${styles.yPaddings} ${styles.xPaddings}`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -32,9 +33,15 @@ const Team = () => (
         </motion.p>
       </div>
 
-      <motion.div className="mt-10 grid md:grid-cols-4 grid-cols-2 gap-5 lg:gap-10" variants={slideIn('left', 'tween', 1.5, 2)}>
+      <div className="mt-10 grid md:grid-cols-4 grid-cols-2 gap-5 lg:gap-10 overflow-hidden">
         {people.map((person, index) => (
-          <div key={person.id} className="relative">
+          <motion.div
+            variants={slideIn('down', 'tween', index * 1, 1)} 
+            key={person.id} 
+            className="relative"
+            onHoverStart={() => setHoverIndex(index)}
+            onHoverEnd={() => setHoverIndex(-1)}
+          >
             <img
               src={person.imgUrl} 
               alt={person.name}
@@ -42,7 +49,7 @@ const Team = () => (
             />
 
             <motion.div
-              whileHover={{ opacity:1 }}
+              animate={{ opacity: hoverIndex === index ? 1 : 0 }}
               className={`flex flex-col text-right absolute bottom-0 w-full h-[100px] lg:h-[200px] people-bg pt-5 lg:pt-10 pr-3 opacity-0 ${index == people.length-4 ? "md:rounded-bl-[70px] lg:rounded-bl-[130px]" : "md:rounded-none"}`}
             >
               <h2 className="text-primary font-medium text-[20px] leading-[20px] lg:text-[50px] lg:leading-[50px]">
@@ -53,11 +60,12 @@ const Team = () => (
                 {person.description}
               </p>
             </motion.div>
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </motion.div>
   </section>
-)
+  )
+}
 
 export default Team

@@ -13,9 +13,11 @@ const Navbar = () => (
     className={`${styles.xPaddings} py-8 relative`}
   >
     <div className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8`}>
-      <h3 className="text-primary text-[14px] sm:text-[18px] lg:text-[24px] cursor-pointer">
-        hire us
-      </h3>
+      <a href="#contact">
+        <h3 className="text-primary text-[14px] sm:text-[18px] lg:text-[24px] cursor-pointer">
+          hire us
+        </h3>
+      </a>
 
       <h2 className="text-primary text-[18px] sm:text-[24px] lg:text-[34px]">
         architecte

@@ -71,31 +71,31 @@ export const expertises = [
     id: 'expertise-1',
     imgUrl: '/expertise-1.jpg',
     title: 'Residential',
-    subtitle: 'Provide a full engaging experience in building information modelling. We have embraced this technology with the aim of streamlining our production process.',
+    subtitle: 'Our focus is on creating homes that are both functional and aesthetically pleasing with timeless designs that endure for generations. High-quality materials ensure our homes will continue to look beautiful.',
   },
   {
     id: 'expertise-2',
     imgUrl: '/expertise-2.jpg',
     title: 'Business',
-    subtitle: 'Provide a full engaging experience in building information modelling. We have embraced this technology with the aim of streamlining our production process.',
+    subtitle: 'Our team stays at the forefront of innovation in the construction of commercial buildings. We use cutting-edge techniques, materials, and design to create efficient, modern, and sustainable business spaces.',
   },
   {
     id: 'expertise-3',
     imgUrl: '/expertise-3.jpg',
     title: 'Hospital',
-    subtitle: 'Provide a full engaging experience in building information modelling. We have embraced this technology with the aim of streamlining our production process.',
+    subtitle: 'Our team designs state-of-the-art hospitals with cutting-edge technology, efficient layouts, and functional spaces to support top-notch patient care.',
   },
   {
     id: 'expertise-4',
     imgUrl: '/expertise-4.jpg',
     title: 'Industrial',
-    subtitle: 'Provide a full engaging experience in building information modelling. We have embraced this technology with the aim of streamlining our production process.',
+    subtitle: 'Our team creates eco-friendly industrial buildings using sustainable materials, technologies, and designs. We strive to create industrial spaces that prioritize both the environment and efficiency.',
   },
   {
     id: 'expertise-5',
     imgUrl: '/expertise-5.jpg',
     title: 'Educational',
-    subtitle: 'Provide a full engaging experience in building information modelling. We have embraced this technology with the aim of streamlining our production process.',
+    subtitle: 'Our team creates educational buildings that utilize the latest in design and technology, promoting innovation and efficiency in the classroom.',
   },
 ]
 

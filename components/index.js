@@ -1,13 +1,13 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import {CategoryBtn} from './CustomButtons';
-import AreaOfExpertise from './AreaOfExpertise';
-import {CustomTextField} from './CustomTextField';
+import BusinessFeature from './BusinessFeature';
+import ResidentialFeature from './ResidentialFeature';
+import HospitalFeature from './HospitalFeature';
 
 export {
   Navbar,
   Footer,
-  CategoryBtn,
-  AreaOfExpertise,
-  CustomTextField,
+  BusinessFeature,
+  ResidentialFeature,
+  HospitalFeature,
 };
